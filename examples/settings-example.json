@@ -19,13 +19,10 @@
     "defaultMode": "default"
   },
   "model": "sonnet",
+  "// PLUGINS": "These two work out of the box. Add others as needed (see claude-code-guide.md Section 8).",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
-    "code-review@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "semgrep@claude-plugins-official": true
+    "code-review@claude-plugins-official": true
   },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"

@@ -301,7 +301,9 @@ gh run watch 12345                 # Watch run in real-time
 
 ### Enable GitHub MCP Server
 
-Add to `~/.claude/.mcp.json`:
+**Easiest way:** Open Claude Code and say `"set up the GitHub MCP server so you can create PRs for me"`. Claude will create the config file for you.
+
+**Manual way:** Add to `~/.claude/.mcp.json` (on Windows: `C:\Users\YourName\.claude\.mcp.json`):
 ```json
 {
   "mcpServers": {
@@ -313,7 +315,7 @@ Add to `~/.claude/.mcp.json`:
 }
 ```
 
-Auto-approve GitHub tools in `~/.claude/settings.json`:
+Auto-approve GitHub tools in `~/.claude/settings.json` (Windows: `C:\Users\YourName\.claude\settings.json`):
 ```json
 {
   "permissions": {

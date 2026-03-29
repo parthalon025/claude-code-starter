@@ -57,28 +57,36 @@ Go to [claude.ai](https://claude.ai) and sign up. You need a paid plan:
 
 ### 2. Get This Starter Kit
 
-**Option A -- Clone with Git (if you have Git installed):**
+> **You need two accounts** for the full setup (they are separate companies):
+> 1. **Anthropic account** at [claude.ai](https://claude.ai) -- this is what you pay for (the AI)
+> 2. **GitHub account** at [github.com](https://github.com) -- this is where your code lives online (free)
+
+**Option A -- Download ZIP (easiest, no tools needed):**
+1. Click the green **Code** button at the top of this page
+2. Click **Download ZIP**
+3. Double-click the downloaded ZIP file, then click **Extract all**
+4. Choose a location like your Documents folder
+5. Open the extracted folder -- you should see `setup-claude-code.bat`
+
+**Option B -- Clone with Git (if you already have Git installed):**
 ```bash
 git clone https://github.com/parthalon025/claude-code-starter.git
 cd claude-code-starter
 ```
 
-**Option B -- Clone with GitHub CLI:**
+**Option C -- Clone with GitHub CLI (if you already have `gh`):**
 ```bash
 gh repo clone parthalon025/claude-code-starter
 cd claude-code-starter
 ```
 
-**Option C -- Download ZIP (no Git needed):**
-1. Click the green **Code** button above
-2. Click **Download ZIP**
-3. Extract to a folder you'll remember (like `C:\Users\YourName\Documents`)
-
 ### 3. Run the Installer
 
-1. Right-click `setup-claude-code.bat` > **Run as administrator**
-2. Press any key when prompted
-3. Wait ~2-5 minutes
+1. Find `setup-claude-code.bat` in the folder you downloaded
+2. Right-click it > choose **Run as administrator**
+   - Windows will show a security prompt ("Do you want to allow this app to make changes?") -- click **Yes**. This gives the installer permission to install programs. It is safe.
+3. Press any key when prompted
+4. Wait ~2-5 minutes (requires ~1 GB of free disk space)
 
 **What it installs:**
 
@@ -93,25 +101,39 @@ Safe to run multiple times -- skips anything already installed.
 
 ### 4. Post-Install Setup
 
-Close ALL terminals, then open a new one:
+**Important:** Close the installer window and ALL other terminals. Then open a brand new one:
+- Press the **Windows key** on your keyboard, type **Terminal**, press **Enter**
+- This is necessary because your computer needs a fresh terminal to find the tools we just installed
+
+Now type these commands **one at a time** (lines starting with `#` are just notes -- don't type those):
 
 ```bash
-# Verify everything works
+# Verify Claude Code installed correctly
 claude --version
 claude doctor
-
-# Configure Git (first time only)
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
-
-# Log in to GitHub (first time only)
-gh auth login
-# Choose: GitHub.com > HTTPS > Login with browser
-
-# Launch Claude Code
-claude
-# Browser opens -- sign in with your Anthropic account
 ```
+
+```bash
+# Configure Git with YOUR name and email (replace the placeholder text)
+git config --global user.name "Your Actual Name"
+git config --global user.email "your-actual-email@example.com"
+```
+
+Log in to GitHub (interactive -- follow the prompts):
+```bash
+gh auth login
+```
+It will ask you several questions. Use arrow keys to pick and press Enter:
+- "Where do you use GitHub?" -- select **GitHub.com**
+- "Preferred protocol?" -- select **HTTPS**
+- "How would you like to authenticate?" -- select **Login with a web browser**
+- It shows a code. Press Enter, paste the code in the browser that opens, click **Authorize**
+
+Finally, launch Claude Code:
+```bash
+claude
+```
+A browser window opens. Sign in with your **Anthropic** account (not GitHub -- these are different accounts).
 
 ### 5. Try It Out
 
@@ -253,6 +275,10 @@ The complete guide covers everything in this order:
 
 ## Power User Quick Reference
 
+> Skip this section on your first read -- come back when you're comfortable with the basics.
+
+`~` means your home folder. On Windows that is `C:\Users\YourName`. The pipe operator `|` sends output from one command as input to another.
+
 ```
 INSTALL:    setup-claude-code.bat (or irm https://claude.ai/install.ps1 | iex)
 START:      cd your-project && claude
@@ -260,9 +286,9 @@ ONE-SHOT:   claude "your task here"
 PIPE:       git diff | claude "review this"
 HEADLESS:   claude --print "analyze this code"
 
-CONFIG FILES:
+CONFIG FILES (~ = C:\Users\YourName on Windows):
   ~/.claude/settings.json    Settings, permissions, plugins
-  ~/.claude/.mcp.json        MCP server integrations
+  ~/.claude/.mcp.json        MCP (Model Context Protocol) server integrations
   ~/.claude/CLAUDE.md        Global instructions (all projects)
   ./CLAUDE.md                Project instructions (this repo)
   ~/.claude/agents/          Custom specialist agents

@@ -23,7 +23,7 @@ echo    - Windows 10 (1809+) or Windows 11
 echo    - An Anthropic account (free to create, paid to use)
 echo      Sign up at: https://claude.ai
 echo.
-echo  PRICING (as of 2025):
+echo  PRICING (check claude.ai for latest):
 echo    Pro:        $20/mo  (casual use, great for learning)
 echo    Max (5x):  $100/mo  (heavy daily use)
 echo    Max (20x): $200/mo  (professional / power user)
@@ -186,8 +186,8 @@ echo  WHAT: Your AI coding assistant.
 echo  WHY:  This is the tool that writes, edits, and explains code
 echo        using natural language. It's what this whole setup is for!
 echo.
-echo     Running the official Claude Code installer...
-echo     (This may take a minute)
+echo     Running the official Claude Code installer from claude.ai...
+echo     (This uses PowerShell, a built-in Windows tool. May take a minute.)
 echo.
 powershell -ExecutionPolicy Bypass -Command "irm https://claude.ai/install.ps1 | iex"
 if %errorlevel% neq 0 (
@@ -274,18 +274,20 @@ echo    ALL DONE! Setup is complete.
 echo.
 echo ============================================================
 echo.
-echo  IMPORTANT: Close ALL open terminals/command prompts now.
-echo  New installs won't be recognized until you open a fresh one.
+echo  IMPORTANT: You MUST close this window and open a fresh terminal.
+echo  Your computer needs a new terminal to find the tools we just
+echo  installed. This is normal -- just close and reopen.
 echo.
 echo  ============================================================
 echo   WHAT TO DO NEXT (step by step):
 echo  ============================================================
 echo.
-echo   1. CLOSE this window
+echo   1. Press any key below, then CLOSE this window
 echo.
 echo   2. Open a NEW terminal:
-echo      - Press Windows key, type "Terminal", press Enter
-echo      - Or press Windows key, type "cmd", press Enter
+echo      - Press the Windows key on your keyboard
+echo      - Type "Terminal"
+echo      - Press Enter
 echo.
 echo   3. Verify Claude Code is installed:
 echo.
@@ -296,6 +298,7 @@ echo.
 echo        claude doctor
 echo.
 echo   5. Configure Git (first time only):
+echo      (Replace "Your Name" and email with YOUR actual info)
 echo.
 echo        git config --global user.name "Your Name"
 echo        git config --global user.email "your@email.com"
@@ -303,14 +306,22 @@ echo.
 echo   6. Log in to GitHub CLI (first time only):
 echo.
 echo        gh auth login
-echo        (Choose: GitHub.com ^> HTTPS ^> Login with browser)
+echo.
+echo      It asks questions. Use arrow keys and press Enter:
+echo        - "Where do you use GitHub?" ^> GitHub.com
+echo        - "Preferred protocol?" ^> HTTPS
+echo        - "Authenticate?" ^> Login with a web browser
+echo        - It shows a code. Press Enter, paste in browser.
+echo.
+echo      NOTE: Your GitHub account (github.com) and Anthropic
+echo      account (claude.ai) are SEPARATE. Different companies.
 echo.
 echo   7. Start Claude Code for the first time:
 echo.
 echo        claude
 echo.
 echo      A browser window will open. Sign in with your
-echo      Anthropic account (Pro, Max, Teams, or Enterprise).
+echo      ANTHROPIC account (not GitHub -- they are different).
 echo.
 echo   8. Once logged in, try your first project:
 echo.
