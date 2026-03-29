@@ -1,0 +1,24 @@
+{
+  "// INSTRUCTIONS": "Copy this file to ~/.claude/.mcp.json and customize it.",
+  "// REQUIRED": "GitHub CLI must be installed and authenticated: gh auth login",
+  "mcpServers": {
+    "github": {
+      "command": "gh",
+      "args": ["mcp-server"],
+      "// note": "Requires: winget install GitHub.cli && gh auth login"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "// note": "Live docs for any library. No API key needed."
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-filesystem"],
+      "env": {
+        "ALLOWED_DIRS": "C:\\Users\\YourName\\Documents,D:\\Projects"
+      },
+      "// note": "Change ALLOWED_DIRS to your actual project directories"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.*
+*.key
+credentials.json
+
+# Node (if experimenting locally)
+node_modules/
+package-lock.json
+
+# Python (if experimenting locally)
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Logs
+*.log
