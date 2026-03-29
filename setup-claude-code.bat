@@ -20,6 +20,8 @@ echo    4. Claude Code         (the AI assistant)
 echo.
 echo  PREREQUISITES:
 echo    - Windows 10 (1809+) or Windows 11
+echo    - Internet connection
+echo    - About 1 GB of free disk space
 echo    - An Anthropic account (free to create, paid to use)
 echo      Sign up at: https://claude.ai
 echo.
@@ -98,7 +100,9 @@ if %errorlevel% neq 0 (
     if !errorlevel! neq 0 (
         echo.
         echo [X] Git installation failed.
-        echo     Try installing manually from: https://git-scm.com/download/win
+        echo     This might be a network issue. Make sure you are connected
+        echo     to the internet and try again.
+        echo     Or install manually from: https://git-scm.com/download/win
         echo.
         pause
         exit /b 1
@@ -129,7 +133,9 @@ if %errorlevel% neq 0 (
     if !errorlevel! neq 0 (
         echo.
         echo [X] Node.js installation failed.
-        echo     Try installing manually from: https://nodejs.org
+        echo     This might be a network issue. Make sure you are connected
+        echo     to the internet and try again.
+        echo     Or install manually from: https://nodejs.org
         echo.
         pause
         exit /b 1
@@ -161,7 +167,9 @@ if %errorlevel% neq 0 (
     if !errorlevel! neq 0 (
         echo.
         echo [X] GitHub CLI installation failed.
-        echo     Try installing manually from: https://cli.github.com
+        echo     This might be a network issue. Make sure you are connected
+        echo     to the internet and try again.
+        echo     Or install manually from: https://cli.github.com
         echo.
         echo     NOTE: This is optional -- Claude Code will still work
         echo     without it, but you won't have GitHub integration.
@@ -198,7 +206,9 @@ if %errorlevel% neq 0 (
     if !errorlevel! neq 0 (
         echo.
         echo [X] Claude Code installation failed.
-        echo     Try installing manually from: https://claude.ai/download
+        echo     This might be a network issue. Make sure you are connected
+        echo     to the internet and try again.
+        echo     Or install manually from: https://claude.ai/download
         echo.
         pause
         exit /b 1
