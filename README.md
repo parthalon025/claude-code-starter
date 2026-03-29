@@ -38,7 +38,7 @@ Claude:    Creates files, writes code, installs dependencies, runs tests.
 | [`claude-code-guide.md`](claude-code-guide.md) | **Complete guide** -- from "what's a terminal?" to agent teams, industry best practices, and social media tips | You want to learn everything |
 | [`github-guide.md`](github-guide.md) | **GitHub from zero** -- setup, cloning, branches, PRs, and Claude Code integration | You're new to GitHub/Git |
 | [`templates/`](templates/) | **CLAUDE.md templates** -- copy-paste configs for React, Python, Next.js, or any project | You're starting a project |
-| [`examples/`](examples/) | **Ready-to-use configs** -- settings.json, MCP servers, agents, and slash commands | You want to skip manual setup |
+| [`examples/`](examples/) | **Ready-to-use configs** -- settings.json, MCP (integrations that give Claude extra abilities), agents, and slash commands | You want to skip manual setup |
 
 ---
 

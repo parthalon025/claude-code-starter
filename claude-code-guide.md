@@ -22,6 +22,7 @@ A terminal (also called command prompt, shell, or console) is a text-based way t
 | `cd ..` | Go up one folder | `cd ..` |
 | `mkdir name` | Create a new folder | `mkdir my-project` |
 | `dir` | List files in current folder | `dir` |
+| `ls` | Same as `dir` (works in PowerShell and Windows Terminal, not cmd) | `ls` |
 | `cls` | Clear the screen | `cls` |
 | `command1 \| command2` | Send output of command1 into command2 (called "piping") | `git diff \| claude "review"` |
 
@@ -595,7 +596,7 @@ With CLAUDE.md, Claude:
 
 **Quick setup:** Tell Claude `"configure your settings to auto-approve git commands, npm scripts, and GitHub operations"` and it will edit settings.json for you. Or copy `examples/settings-example.json` from this starter kit to `~/.claude/settings.json`.
 
-Manual edit -- `~/.claude/settings.json`:
+Manual edit -- `~/.claude/settings.json` (Windows: `C:\Users\YourName\.claude\settings.json`):
 
 ```json
 {
@@ -702,7 +703,7 @@ Claude Code can use different AI models. The model affects intelligence, speed, 
 
 **Quick setup:** Tell Claude `"set up the GitHub and Context7 MCP servers"` and it will create the config for you. Or copy `examples/mcp-example.json` from this starter kit to `~/.claude/.mcp.json`.
 
-MCP (Model Context Protocol) servers give Claude access to external tools. Configure in `~/.claude/.mcp.json`:
+MCP (Model Context Protocol) servers give Claude access to external tools. Configure in `~/.claude/.mcp.json` (Windows: `C:\Users\YourName\.claude\.mcp.json`):
 
 ```json
 {
@@ -756,9 +757,11 @@ Now you can say: "create a PR for this branch" or "list open issues"
 
 ## 6. Custom Agents
 
-Specialist AI personas in `~/.claude/agents/`. Instead of Claude being a generalist, you route tasks to experts.
+Specialist AI personas in `~/.claude/agents/` (Windows: `C:\Users\YourName\.claude\agents\`). Instead of Claude being a generalist, you route tasks to experts.
 
-### Your first agent
+**Easiest way:** Tell Claude `"create a code reviewer agent that checks for bugs and security issues"` and it will create the file for you.
+
+### Your first agent (manual)
 
 Create `~/.claude/agents/python-reviewer.md`:
 
@@ -831,9 +834,11 @@ agents/
 
 ## 7. Slash Commands
 
-Reusable prompts saved as files in `~/.claude/commands/`:
+Reusable prompts saved as files in `~/.claude/commands/` (Windows: `C:\Users\YourName\.claude\commands\`):
 
-### Create a command
+**Easiest way:** Tell Claude `"create a /review-pr slash command that reviews code for bugs and security"` and it will create the file for you.
+
+### Create a command (manual)
 
 Create `~/.claude/commands/review-pr.md`:
 
@@ -1455,7 +1460,8 @@ ONE-SHOT: claude "your task"
 PIPE:     git diff | claude "review"
 HEADLESS: claude --print "analyze this code"
 
-CONFIG:   ~/.claude/settings.json   (settings + permissions)
+CONFIG (~ = C:\Users\YourName on Windows):
+          ~/.claude/settings.json   (settings + permissions)
           ~/.claude/.mcp.json       (MCP servers)
           ~/.claude/CLAUDE.md       (global instructions)
           ./CLAUDE.md               (project instructions)
