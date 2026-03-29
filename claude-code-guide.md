@@ -23,6 +23,12 @@ A terminal (also called command prompt, shell, or console) is a text-based way t
 | `mkdir name` | Create a new folder | `mkdir my-project` |
 | `dir` | List files in current folder | `dir` |
 | `cls` | Clear the screen | `cls` |
+| `command1 \| command2` | Send output of command1 into command2 (called "piping") | `git diff \| claude "review"` |
+
+**Special symbols you'll see in this guide:**
+- `~` means your home folder. **On Windows, that is `C:\Users\YourName`**. When the guide says `~/.claude/`, it means `C:\Users\YourName\.claude\`. You can open it in File Explorer by typing `%USERPROFILE%` in the address bar.
+- `#` at the start of a line means it is a comment (a note for humans, not a command). Don't type those lines.
+- Text in `[brackets]` is a placeholder -- replace it with your actual value.
 
 **Example: Navigate to your Documents and create a project folder:**
 ```bash
@@ -295,7 +301,7 @@ If someone shared this repo with you, here's how to get it on your computer:
 
 **Option A -- With Git (recommended):**
 ```bash
-git clone https://github.com/USERNAME/claude-code-starter.git
+git clone https://github.com/parthalon025/claude-code-starter.git
 cd claude-code-starter
 ```
 
@@ -1299,6 +1305,8 @@ claude
 | Trust without testing | AI code can have bugs | Always run tests |
 
 ---
+
+> **Everything below is optional** -- tips for sharing your Claude Code experience on social media and building your professional brand. Skip this if you just want to code.
 
 ## 16. Social Media Tips and Tricks
 
