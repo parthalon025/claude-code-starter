@@ -205,11 +205,11 @@ Claude Code supports multiple models. Pick based on your task:
 
 | Model | Speed | Intelligence | Best For |
 |---|---|---|---|
-| **Opus 4.6** | Slower | Highest | Complex tasks, architecture, hard bugs |
+| **Opus 4.8** | Slower | Highest | Complex tasks, architecture, hard bugs |
 | **Sonnet 4.6** | Fast | Very High | Daily coding, most tasks |
 | **Haiku 4.5** | Fastest | Good | Simple edits, quick questions |
 
-Set in `settings.json`: `"model": "opus[1m]"` -- or switch with `/fast` during a session. See the [full model guide](claude-code-guide.md#models) for details.
+Set in `settings.json`: `"model": "claude-opus-4-8"` -- or switch with `/fast` during a session. See the [full model guide](claude-code-guide.md#models) for details.
 
 ## Plugins and Skills
 

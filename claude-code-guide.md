@@ -612,7 +612,7 @@ Manual edit -- `~/.claude/settings.json` (Windows: `C:\Users\YourName\.claude\se
     ],
     "defaultMode": "default"
   },
-  "model": "opus[1m]",
+  "model": "claude-opus-4-8",
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
@@ -662,20 +662,20 @@ Claude Code can use different AI models. The model affects intelligence, speed, 
 
 | Model | ID in Settings | Speed | Intelligence | Best For |
 |---|---|---|---|---|
-| **Claude Opus 4.6** | `opus[1m]` | Slower | Highest | Complex architecture, multi-file refactors, hard bugs |
-| **Claude Sonnet 4.6** | `sonnet` | Fast | Very High | Daily coding, most tasks, good balance |
-| **Claude Haiku 4.5** | `haiku` | Fastest | Good | Simple tasks, quick questions, cost-sensitive |
+| **Claude Opus 4.8** | `claude-opus-4-8` | Slower | Highest | Complex architecture, multi-file refactors, hard bugs |
+| **Claude Sonnet 4.6** | `claude-sonnet-4-6` | Fast | Very High | Daily coding, most tasks, good balance |
+| **Claude Haiku 4.5** | `claude-haiku-4-5` | Fastest | Good | Simple tasks, quick questions, cost-sensitive |
 
 **Set your default model in settings.json:**
 ```json
 {
-  "model": "opus[1m]"
+  "model": "claude-opus-4-8"
 }
 ```
 
 **Switch models on the fly:**
 - Toggle fast mode: type `/fast` during a session (uses same model with faster output)
-- Or set per-session: `claude --model sonnet`
+- Or set per-session: `claude --model claude-sonnet-4-6`
 
 **Which model should I use?**
 
@@ -695,7 +695,7 @@ Claude Code can use different AI models. The model affects intelligence, speed, 
 - Use `/cost` during a session to see token usage
 - Haiku is great for high-volume, low-complexity tasks
 
-**The `[1m]` suffix** means 1 million token context window. This lets Claude read very large codebases. Use it for projects with many files.
+**Context windows:** All current Claude models support large context windows (up to 1M tokens for Opus and Sonnet), letting Claude read very large codebases with many files.
 
 ---
 
