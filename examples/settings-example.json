@@ -1,6 +1,6 @@
 {
   "// INSTRUCTIONS": "Copy this file to ~/.claude/settings.json and customize it.",
-  "// MODELS": "Options: opus[1m] (smartest), sonnet (fast+smart), haiku (fastest)",
+  "// MODELS": "Options: claude-opus-4-8 (smartest), claude-sonnet-4-6 (fast+smart), claude-haiku-4-5 (fastest)",
   "permissions": {
     "allow": [
       "mcp__github__*",
